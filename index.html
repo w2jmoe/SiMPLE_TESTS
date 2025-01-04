@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态时钟</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="clock-container">
+        <!-- 日期显示 -->
+        <div id="date" class="date"></div>
+        <!-- 时间显示 -->
+        <div id="time" class="time"></div>
+    </div>
+
+    <!-- JavaScript代码 -->
+    <script>
+        function updateTime() {
+            const now = new Date();
+            
+            // 更新日期
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            document.getElementById('date').textContent = 
+                `${year}年 ${month}月 ${day}日`;
+            
+            // 更新时间
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('time').textContent = 
+                `${hours}：${minutes}：${seconds}`;
+        }
+
+        // 立即更新一次
+        updateTime();
+        // 每秒更新一次
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+/* 设置页面的基本样式 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff; /* 使用淡蓝色背景 */
+    font-family: Arial, sans-serif;
+}
+
+/* 时钟容器 */
+.clock-container {
+    text-align: center;
+}
+
+/* 日期样式 */
+.date {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* 时间样式 */
+.time {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #2196F3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+} 
